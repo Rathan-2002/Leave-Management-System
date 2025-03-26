@@ -6,7 +6,7 @@
     <div class="mb-3">
       <label for="userId" class="form-label">Employee</label>
       <select name="userId" id="userId" class="form-control" required>
-        <option value="">Select Employee</option>
+        <option value="">Choose Employee</option>
         <% users.forEach(user => { %>
           <option value="<%= user.id %>"><%= user.firstName %> <%= user.lastName %></option>
         <% }); %>
@@ -16,7 +16,7 @@
     <div class="mb-3">
       <label for="leaveTypeId" class="form-label">Leave Type</label>
       <select name="leaveTypeId" id="leaveTypeId" class="form-control" required>
-        <option value="">Select Leave Type</option>
+        <option value="">Choose Leave Type</option>
         <% leaveTypes.forEach(type => { %>
           <option value="<%= type.id %>"><%= type.name %></option>
         <% }); %>

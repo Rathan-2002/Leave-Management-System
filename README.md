@@ -57,9 +57,10 @@ The project follows a modular architecture for ease of maintenance and scalabili
 3. **Create a `.env` File**
    In the root directory of the project, create a `.env` file and add the following environment variables:
    ```bash
+   # Replace with the your related data
    DB_NAME=leave_management_data
    DB_USER=user
-   DB_PASSWORD=root      # Replace with the password you set
+   DB_PASSWORD=root      
    DB_HOST=localhost
    DB_DIALECT=mysql
    SESSION_SECRET=myVerySecretKey123!
