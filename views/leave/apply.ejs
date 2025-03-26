@@ -1,0 +1,36 @@
+<%- include('../partials/header') %>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+<div class="container mt-5">
+    <h2>Apply for Leave</h2>
+    <form action="/leave/apply" method="POST">
+        <div class="mb-3">
+            <label for="leaveType" class="form-label">Leave Type</label>
+            <select class="form-select" id="leaveType" name="leaveTypeId" required>
+                <option value="">Select Leave Type</option>
+                <% if (leaveTypes && leaveTypes.length > 0) { %>
+                    <% leaveTypes.forEach(function(type) { %>
+                        <option value="<%= type.id %>"><%= type.name %></option>
+                    <% }); %>
+                <% } else { %>
+                    <option value="">No leave types available</option>
+                <% } %>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="startDate" class="form-label">Start Date</label>
+            <input type="date" class="form-control" id="startDate" name="startDate" required>
+        </div>
+        <div class="mb-3">
+            <label for="endDate" class="form-label">End Date</label>
+            <input type="date" class="form-control" id="endDate" name="endDate" required>
+        </div>
+        <div class="mb-3">
+            <label for="comments" class="form-label">Comments</label>
+            <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<%- include('../partials/footer') %>

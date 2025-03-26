@@ -1,0 +1,19 @@
+<%- include('../partials/header') %>
+
+<div class="container mt-5">
+    <h2><%= isEdit ? 'Edit Leave Type' : 'Add New Leave Type' %></h2>
+    <form action="<%= isEdit ? '/admin/leave-types/edit/' + (leaveType ? leaveType.id : '') : '/admin/leave-types' %>" method="POST">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" value="<%= isEdit && leaveType ? leaveType.name : '' %>" required>
+        </div>
+        <div class="mb-3">
+            <label for="defaultDays" class="form-label">Default Days</label>
+            <input type="number" class="form-control" id="defaultDays" name="defaultDays" value="<%= isEdit && leaveType ? leaveType.defaultDays : '' %>" required>
+        </div>
+        <button type="submit" class="btn btn-primary"><%= isEdit ? 'Update' : 'Add' %></button>
+        <a href="/admin/leave-types" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+
+<%- include('../partials/footer') %>

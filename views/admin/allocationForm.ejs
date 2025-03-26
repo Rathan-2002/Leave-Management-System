@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+
+<div class="container mt-5">
+  <h2>Add Leave Allocation</h2>
+  <form action="/admin/allocations/new" method="POST">
+    <div class="mb-3">
+      <label for="userId" class="form-label">Employee</label>
+      <select name="userId" id="userId" class="form-control" required>
+        <option value="">Select Employee</option>
+        <% users.forEach(user => { %>
+          <option value="<%= user.id %>"><%= user.firstName %> <%= user.lastName %></option>
+        <% }); %>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="leaveTypeId" class="form-label">Leave Type</label>
+      <select name="leaveTypeId" id="leaveTypeId" class="form-control" required>
+        <option value="">Select Leave Type</option>
+        <% leaveTypes.forEach(type => { %>
+          <option value="<%= type.id %>"><%= type.name %></option>
+        <% }); %>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="allocatedDays" class="form-label">Allocated Days</label>
+      <input type="number" name="allocatedDays" id="allocatedDays" class="form-control" required min="1">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Allocation</button>
+  </form>
+</div>
+
+<%- include('../partials/footer') %>

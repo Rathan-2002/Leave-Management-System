@@ -1,0 +1,10 @@
+<%- include('../partials/header') %>
+<div class="container mt-5">
+    <h2>Allocation Details for <%= allocation.User.firstName %> <%= allocation.User.lastName %></h2>
+    <p><strong>Leave Type:</strong> <%= allocation.LeaveType.name %></p>
+    <p><strong>Original Allocations:</strong> <%= allocation.originalAllocations %> days</p>
+    <p><strong>Current Allocations:</strong> <%= allocation.currentAllocations %> days</p>
+    <!-- Add any additional details or a history if available -->
+    <a href="/admin/allocations" class="btn btn-primary">Back to Allocations</a>
+</div>
+<%- include('../partials/footer') %>

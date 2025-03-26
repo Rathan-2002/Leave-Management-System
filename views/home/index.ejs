@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+<div class="container mt-5">
+    <h1>Welcome to the Leave Management System</h1>
+    <% if (user) { %>
+        <p>Hello, <%= user.firstName %> <%= user.lastName %>!</p>
+        <% if (user.role === 'employee') { %>
+            <p>You can apply for leave or check your leave status from the navigation menu.</p>
+        <% } else if (user.role === 'admin') { %>
+            <p>As an admin, you can manage employees, leave allocations, requests, and leave types from the navigation menu.</p>
+        <% } %>
+    <% } else { %>
+        <p>Please login or register to use the system.</p>
+    <% } %>
+</div>
+
+<%- include('../partials/footer') %>

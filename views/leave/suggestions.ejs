@@ -1,0 +1,56 @@
+<!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
+<!-- <h1>Leave Suggestions</h1>
+<% if (suggestions.length > 0) { %>
+  <ul>
+    <% suggestions.forEach(suggestion => { %>
+      <li>
+        <%= suggestion.reason %>
+        <a href="/leave/apply?dates=<%= suggestion.dates.join(',') %>">Apply for this date</a>
+      </li>
+    <% }) %>
+  </ul>
+<% } else { %>
+  <p>No leave suggestions at this time. Consider planning your leave based on your preferences.</p>
+<% } %> -->
+
+
+
+<!-- suggestion.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Leave Suggestions</title>
+  <!-- Include Bootstrap CSS (via CDN or local file) -->
+  <!-- If you're serving bootstrap.min.css from /css/bootstrap.min.css, this is fine -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">Leave Suggestions</h1>
+    
+    <% if (suggestions.length > 0) { %>
+      <ul class="list-group">
+        <% suggestions.forEach(suggestion => { %>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span><%= suggestion.reason %></span>
+            <a href="/leave/apply?dates=<%= suggestion.dates.join(',') %>" class="btn btn-sm btn-primary">
+              Apply for this date
+            </a>
+          </li>
+        <% }) %>
+      </ul>
+    <% } else { %>
+      <div class="alert alert-info">
+        No leave suggestions at this time. Consider planning your leave based on your preferences.
+      </div>
+    <% } %>
+  </div>
+
+  <!-- (Optional) Include Bootstrap JS if you plan to use interactive components -->
+  <!-- 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  -->
+</body>
+</html>

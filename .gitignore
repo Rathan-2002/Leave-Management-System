@@ -1,0 +1,36 @@
+# Ignore node_modules (if you're using Node.js)
+node_modules/
+
+# Ignore environment variable files (sensitive data like API keys, passwords)
+.env
+
+# Ignore package lock file (if you want to avoid locking versions across machines, optional)
+package-lock.json
+
+# Ignore log files
+*.log
+
+# Ignore OS-specific files (Windows specific)
+Thumbs.db
+Desktop.ini
+
+# Ignore git configuration files (if sensitive data exists)
+.git/
+
+# Ignore migrations (if they contain sensitive information or are generated)
+# migrations/
+
+# Ignore temporary files
+*.swp
+*.bak
+.sfdx
+
+# Ignore IDE/editor-specific files
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Ignore views if you do not want them tracked (optional)
+# views/
+
+# Ignore any other sensitive or temporary files as needed

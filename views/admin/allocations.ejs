@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Employee</th>
+            <th>Leave Type</th>
+            <th>Original Allocations</th>
+            <th>Current Allocations</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% allocations.forEach(allocation => { %>
+            <tr>
+                <td><%= allocation.User.firstName %> <%= allocation.User.lastName %></td>
+                <td><%= allocation.LeaveType.name %></td>
+                <td><%= allocation.originalAllocations %></td>
+                <td><%= allocation.currentAllocations %></td>
+                <td>
+                    <a href="/admin/allocations/view/<%= allocation.id %>" class="btn btn-info">View Allocation</a>
+                    <!-- <a href="/admin/allocations/new" class="btn btn-primary mb-3">Add Allocation</a> -->
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+

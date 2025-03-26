@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "user",
+    "password": "root",
+    "database": "leave_management_data",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "user",
+    "password": "root",
+    "database": "leave_management_data",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "user",
+    "password": "root",
+    "database": "leave_management_data",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
