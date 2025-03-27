@@ -25,7 +25,6 @@ The project follows a modular architecture for ease of maintenance and scalabili
 - `models`: Database models that define the structure of tables.
 - `public`: Static assets like CSS, JavaScript, and image files.
 - `routes`: Defines the API endpoints for the application.
-- `seeders`: Files that populate the database with initial data.
 - `views`: View files that render the user interface.
 
 ## Technical Details
