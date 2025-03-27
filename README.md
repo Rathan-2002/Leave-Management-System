@@ -63,8 +63,8 @@ The project follows a modular architecture for ease of maintenance and scalabili
    DB_PASSWORD=root      
    DB_HOST=localhost
    DB_DIALECT=mysql
-   SESSION_SECRET=myVerySecretKey123!
-   CALENDARIFIC_API_KEY=i4buX3YVVV8R5949j6m4jA9vI6j3WJ3Y
+   SESSION_SECRET=// your secret key
+   CALENDARIFIC_API_KEY=//your API Key
    ```
 
 4. **Set Up the Database**
